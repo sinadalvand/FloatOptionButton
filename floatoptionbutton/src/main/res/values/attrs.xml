@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FloatOptionButton">
+        <attr name="fob_buttonColor" format="color" />
+        <attr name="fob_backgroundColor" format="color" />
+        <attr name="fob_mainIcon" format="reference" />
+        <attr name="fob_leftIcon" format="reference" />
+        <attr name="fob_rightIcon" format="reference" />
+        <attr name="fob_open" format="boolean" />
+        <attr name="fob_scale" format="float" />
+        <attr name="fob_animDuration" format="integer" />
+        <attr name="fob_scaleWidth" format="dimension" />
+        <attr name="fob_mainIconColor" format="color"/>
+    </declare-styleable>
+</resources>

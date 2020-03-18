@@ -1,0 +1,2 @@
+include ':app',':floatoptionbutton'
+rootProject.name = "FobApplication"
