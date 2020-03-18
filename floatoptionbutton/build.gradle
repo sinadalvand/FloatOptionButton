@@ -11,12 +11,12 @@ ext {
     libraryName = 'FloatOptionButton'
     artifact = 'floatoptionbutton'
 
-    libraryDescription = 'animated Progressbar whit many custom options'
+    libraryDescription = 'float action button with two more option'
 
     siteUrl = 'https://github.com/sinadalvand/FloatOptionButton'
     gitUrl = 'https://github.com/sinadalvand/FloatOptionButton.git'
 
-    libraryVersion = "1.0.1"
+    libraryVersion = "1.0.2"
 
     developerId = 'sinadalvand'
     developerName = 'Sina Dalvand'
@@ -72,3 +72,6 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'com.github.clans:fab:1.6.4'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
