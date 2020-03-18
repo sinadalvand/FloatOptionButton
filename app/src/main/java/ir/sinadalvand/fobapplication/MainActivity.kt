@@ -27,5 +27,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        floatOptionButton.expand()
     }
 }
