@@ -24,9 +24,9 @@ internal class RoundOptionDrawable(color: Int = Color.RED) : Drawable() {
         val width = bounds.width()
         val offset = height - heightBase
 
-        canvas.drawCircle(heightBase / 2f, height / 2f, heightBase / 2f, paint)
-        canvas.drawCircle(width - (heightBase / 2f), height / 2f, heightBase / 2f, paint)
-        canvas.drawRect(heightBase / 2f, offset / 2f, width - (heightBase / 2f), height - (offset / 2f), paint)
+        canvas.drawCircle((heightBase / 2f)+10.px, height / 2f, heightBase / 2f, paint)
+        canvas.drawCircle(width - (heightBase / 2f)-10.px, height / 2f, heightBase / 2f, paint)
+        canvas.drawRect(heightBase / 2f+10.px, offset / 2f, width - (heightBase / 2f)-10.px, height - (offset / 2f), paint)
     }
 
     override fun setAlpha(alpha: Int) {
