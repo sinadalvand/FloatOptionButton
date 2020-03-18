@@ -9,11 +9,11 @@
 
 
 
-<img src="thub.com/sinadalvand/FloatOptionButton/blob/master/art/image.gif" width="250"/>
+<img src="https://github.com/sinadalvand/FloatOptionButton/blob/master/art/image.gif" width="250"/>
 
 
 ## screenshot
-<img src="thub.com/sinadalvand/FloatOptionButton/blob/master/art/preview.gif" width="250"/>
+<img src="https://github.com/sinadalvand/FloatOptionButton/blob/master/art/preview.gif" width="250"/>
 
 
 ## Gradle & Maven
