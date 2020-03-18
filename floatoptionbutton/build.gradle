@@ -1,6 +1,38 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'FloatOptionButton'
+
+    publishedGroupId = 'ir.sinadalvand.libs'
+    libraryName = 'FloatOptionButton'
+    artifact = 'floatoptionbutton'
+
+    libraryDescription = 'animated Progressbar whit many custom options'
+
+    siteUrl = 'https://github.com/sinadalvand/FloatOptionButton'
+    gitUrl = 'https://github.com/sinadalvand/FloatOptionButton.git'
+
+    libraryVersion = "1.0.1"
+
+    developerId = 'sinadalvand'
+    developerName = 'Sina Dalvand'
+    developerEmail = 'dalvandsina@yahoo.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+tasks.withType(Javadoc) {
+    excludes = ['**/*.kt']
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
 
 android {
     compileSdkVersion 29

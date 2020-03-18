@@ -4,12 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3c3d47"
     tools:context=".MainActivity">
 
     <ir.sinadalvand.floatoptionbutton.FloatOptionButton
         android:id="@+id/floatOptionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:fob_animDuration="300"
+        app:fob_autoCollapseInClick="false"
+        app:fob_backgroundColor="#f66767"
+        app:fob_buttonColor="@android:color/white"
+        app:fob_scale="3.5"
+        app:fob_open="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

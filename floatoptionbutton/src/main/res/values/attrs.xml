@@ -11,5 +11,6 @@
         <attr name="fob_animDuration" format="integer" />
         <attr name="fob_scaleWidth" format="dimension" />
         <attr name="fob_mainIconColor" format="color"/>
+        <attr name="fob_autoCollapseInClick" format="boolean"/>
     </declare-styleable>
 </resources>

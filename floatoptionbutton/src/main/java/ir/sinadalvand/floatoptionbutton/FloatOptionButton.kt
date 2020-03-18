@@ -36,6 +36,7 @@ class FloatOptionButton @JvmOverloads constructor(
     private var scale = 4.0f
     private var duration = 200
     private var maxWidth = -1
+    private var autoCollapse = false
     private var listener: FloatOptionButtonListener? = null
     private var animator: ValueAnimator = ValueAnimator.ofFloat()
     private var isExpanded = false;
@@ -62,6 +63,7 @@ class FloatOptionButton @JvmOverloads constructor(
         scale = a.getFloat(R.styleable.FloatOptionButton_fob_scale, scale)
         duration = a.getInt(R.styleable.FloatOptionButton_fob_animDuration, duration)
         maxWidth = a.getInt(R.styleable.FloatOptionButton_fob_scaleWidth, maxWidth)
+        autoCollapse = a.getBoolean(R.styleable.FloatOptionButton_fob_autoCollapseInClick, autoCollapse)
         a.recycle()
 
 
@@ -143,6 +145,11 @@ class FloatOptionButton @JvmOverloads constructor(
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
+        if (isInEditMode) {
+            setMeasuredDimension(150, 150)
+            return
+        }
+
         val desiredWidth = resources.getDimension(R.dimen.defaultSize).toInt()
         val desiredHeight = resources.getDimension(R.dimen.defaultSize).toInt()
 
@@ -207,11 +214,10 @@ class FloatOptionButton @JvmOverloads constructor(
 
 
         //MUST CALL THIS
-        if (isInEditMode) {
-            setMeasuredDimension(desiredWidth, desiredHeight)
-        } else {
-            setMeasuredDimension(width, height)
-        }
+
+
+        setMeasuredDimension(width, height)
+
 
     }
 
@@ -248,9 +254,11 @@ class FloatOptionButton @JvmOverloads constructor(
                 listener?.mainButtonClicked(button)
             }
             leftButton -> {
+                if(autoCollapse) collapse()
                 listener?.leftButtonClicked(leftButton)
             }
             rightButton -> {
+                if(autoCollapse) collapse()
                 listener?.rightButtonClicked(rightButton)
             }
         }
